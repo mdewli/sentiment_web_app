@@ -11,48 +11,48 @@ import matplotlib.pyplot as plt
 def main():
     
     
-    ger_gov_img = Image.open('data/ger_cities.PNG')
-    ger_gov = Image.open('data/ger_gov.PNG')
+    ger_gov_img = Image.open('ger_cities.PNG')
+    ger_gov = Image.open('ger_gov.PNG')
     
-    ger_econ_img = Image.open('data/econ.jpg')   
-    ger_econ = Image.open('data/ger_econ.PNG')
+    ger_econ_img = Image.open('econ.jpg')   
+    ger_econ = Image.open('ger_econ.PNG')
     
-    ger_head_img = Image.open('data/angela.jpg')
-    ger_head = Image.open('data/ger_head.PNG')
+    ger_head_img = Image.open('angela.jpg')
+    ger_head = Image.open('ger_head.PNG')
     
-    vaccn_img = Image.open('data/vaccn.jpg')
-    ger_vaccn = Image.open('data/ger_vaccn.PNG')
+    vaccn_img = Image.open('vaccn.jpg')
+    ger_vaccn = Image.open('ger_vaccn.PNG')
     
-    
-    
-    
-      
-    ind_gov_img = Image.open('data/ind_map.PNG')
-    ind_gov = Image.open('data/ind_govt.PNG')
-    
-    ind_econ_img = Image.open('data/ind-econ_img.jpg')   
-    ind_econ = Image.open('data/economy.PNG')
-    
-    ind_head_img = Image.open('data/modi.jpg')
-    ind_head = Image.open('data/ind_head.PNG')
-    
-    vaccn_Img = Image.open('data/vaccn.jpg')
-    ind_vaccn = Image.open('data/ind_vacc.PNG')
     
     
     
       
-    tur_gov_img = Image.open('data/turky_map.PNG')
-    tur_gov = Image.open('data/turk_gov.PNG')
+    ind_gov_img = Image.open('ind_map.PNG')
+    ind_gov = Image.open('ind_govt.PNG')
     
-    tur_econ_img = Image.open('data/tur_econ_img.jpg')   
-    tur_econ = Image.open('data/turk_econ.PNG')
+    ind_econ_img = Image.open('ind-econ_img.jpg')   
+    ind_econ = Image.open('economy.PNG')
     
-    tur_head_img = Image.open('data/erdogan_img.png')
-    tur_head = Image.open('data/turk_erdo.PNG')
+    ind_head_img = Image.open('modi.jpg')
+    ind_head = Image.open('ind_head.PNG')
     
-    vaccn_img = Image.open('data/vaccn.jpg')
-    tur_vaccn = Image.open('data/turk_vacc.PNG')
+    vaccn_Img = Image.open('vaccn.jpg')
+    ind_vaccn = Image.open('ind_vacc.PNG')
+    
+    
+    
+      
+    tur_gov_img = Image.open('turky_map.PNG')
+    tur_gov = Image.open('turk_gov.PNG')
+    
+    tur_econ_img = Image.open('tur_econ_img.jpg')   
+    tur_econ = Image.open('turk_econ.PNG')
+    
+    tur_head_img = Image.open('erdogan_img.png')
+    tur_head = Image.open('turk_erdo.PNG')
+    
+    vaccn_img = Image.open('vaccn.jpg')
+    tur_vaccn = Image.open('turk_vacc.PNG')
     
     
     
@@ -101,7 +101,7 @@ def main():
         st.subheader("Select a topic or a country from the dropdown list to the left of the screen!")
         st.text("")
         st.write("The goal of the project was to analyse the public sentiment towards the head's of the states, the economy, the vaccines and the handling of the corona crisis by the ruling parties. In order to analyse the sentiment towards government's handling of the pandemic we considered tweets which had words 'Government'/Ruling parties name/Head of state's name and corona in the same tweet. Similarly, various other 'keywords' were used to extract tweets on other issues ")
-        image = Image.open('data/homepage.PNG')
+        image = Image.open('homepage.PNG')
         st.write("This analysis is based on over 30 thousand tweets collected in the months of november and december using twitter's official API 'Tweepy'. We have considered tweets from from 4 major cities of India, Turkey and Germany for this analysis.The tweets extracted, contained text data in 3 languages: English, German and Turkish. The sentiment scores were calculated using pretrained BERT based models which are available in English, Turkish and German language. The sentiment is divided in three categories: Positive, Negative and Neutral. The score may range from 0 to 1 and is a measure of accuracy of prediction.The visualizations were produced using Tableau. The web app has been created using the open source Python library called Sreamlit.")
         st.image(image,use_column_width=True)
         
@@ -120,9 +120,9 @@ def main():
         if select1==countries[0]:
             slot1.subheader("Public perception on various issues across 4 major German cities:")
             slot2.subheader("")
-            ger_map = Image.open('data/ger_cities.PNG')
+            ger_map = Image.open('ger_cities.PNG')
             slot3.image(ger_map,use_column_width=True)
-            ger_gov = Image.open('data/ger_all.PNG')
+            ger_gov = Image.open('ger_all.PNG')
             slot4.subheader('Sentiment across 4 major cities of Germany:')
             slot5.subheader("")
             slot6.image(ger_gov,use_column_width=True)
@@ -131,9 +131,9 @@ def main():
         if select1==countries[1]:
             slot1.subheader("Public perception on various issues across 4 major Indian cities:")
             slot2.subheader("")
-            ind_map = Image.open('data/ind_map.PNG')
+            ind_map = Image.open('ind_map.PNG')
             slot3.image(ind_map,use_column_width=True)
-            ind_gov = Image.open('data/india_all.PNG')
+            ind_gov = Image.open('india_all.PNG')
             slot4.subheader('Sentiment across 4 major cities of India:')
             slot5.subheader("")
             slot6.image(ind_gov,use_column_width=True)
@@ -142,9 +142,9 @@ def main():
         if select1==countries[2]:
             slot1.subheader("Public perception on various issues across 4 major Turkish cities:")
             slot2.subheader("")
-            tur_map = Image.open('data/turky_map.PNG')
+            tur_map = Image.open('turky_map.PNG')
             slot3.image(tur_map,use_column_width=True)
-            tur_gov = Image.open('data/turk_all.PNG')
+            tur_gov = Image.open('turk_all.PNG')
             slot4.subheader('Sentiment across 4 major cities of Turkey:')
             slot5.subheader("")
             slot6.image(tur_gov,use_column_width=True)
@@ -366,7 +366,7 @@ def main():
         
 @st.cache
 def load_data():
-    df = pd.read_csv('./data/Final.csv',encoding='utf-8')
+    df = pd.read_csv('Final.csv',encoding='utf-8')
     df=df.iloc[:,1:]
     return df
 
