@@ -11,48 +11,48 @@ import matplotlib.pyplot as plt
 def main():
     
     
-    ger_gov_img = Image.open('ger_cities.PNG', "rb")
-    ger_gov = Image.open('ger_gov.PNG', "rb")
+    ger_gov_img = Image.open('ger_cities.PNG', "r")
+    ger_gov = Image.open('ger_gov.PNG', "r")
     
-    ger_econ_img = Image.open('econ.jpg', "rb")   
-    ger_econ = Image.open('ger_econ.PNG', "rb")
+    ger_econ_img = Image.open('econ.jpg', "r")   
+    ger_econ = Image.open('ger_econ.PNG', "r")
     
-    ger_head_img = Image.open('angela.jpg', "rb")
-    ger_head = Image.open('ger_head.PNG', "rb")
+    ger_head_img = Image.open('angela.jpg', "r")
+    ger_head = Image.open('ger_head.PNG', "r")
     
-    vaccn_img = Image.open('vaccn.jpg', "rb")
-    ger_vaccn = Image.open('ger_vaccn.PNG', "rb")
+    vaccn_img = Image.open('vaccn.jpg', "r")
+    ger_vaccn = Image.open('ger_vaccn.PNG', "r")
     
-    
-    
-    
-      
-    ind_gov_img = Image.open('ind_map.PNG', "rb")
-    ind_gov = Image.open('ind_govt.PNG', "rb")
-    
-    ind_econ_img = Image.open('ind-econ_img.jpg', "rb")   
-    ind_econ = Image.open('economy.PNG', "rb")
-    
-    ind_head_img = Image.open('modi.jpg', "rb")
-    ind_head = Image.open('ind_head.PNG', "rb")
-    
-    vaccn_Img = Image.open('vaccn.jpg', "rb")
-    ind_vaccn = Image.open('ind_vacc.PNG', "rb")
     
     
     
       
-    tur_gov_img = Image.open('turky_map.PNG', "rb")
-    tur_gov = Image.open('turk_gov.PNG', "rb")
+    ind_gov_img = Image.open('ind_map.PNG', "r")
+    ind_gov = Image.open('ind_govt.PNG', "r")
     
-    tur_econ_img = Image.open('tur_econ_img.jpg', "rb")   
-    tur_econ = Image.open('turk_econ.PNG', "rb")
+    ind_econ_img = Image.open('ind-econ_img.jpg', "r")   
+    ind_econ = Image.open('economy.PNG', "r")
     
-    tur_head_img = Image.open('erdogan_img.png', "rb")
-    tur_head = Image.open('turk_erdo.PNG', "rb")
+    ind_head_img = Image.open('modi.jpg', "r")
+    ind_head = Image.open('ind_head.PNG', "r")
     
-    vaccn_img = Image.open('vaccn.jpg', "rb")
-    tur_vaccn = Image.open('turk_vacc.PNG', "rb")
+    vaccn_Img = Image.open('vaccn.jpg', "r")
+    ind_vaccn = Image.open('ind_vacc.PNG', "r")
+    
+    
+    
+      
+    tur_gov_img = Image.open('turky_map.PNG', "r")
+    tur_gov = Image.open('turk_gov.PNG', "r")
+    
+    tur_econ_img = Image.open('tur_econ_img.jpg', "r")   
+    tur_econ = Image.open('turk_econ.PNG', "r")
+    
+    tur_head_img = Image.open('erdogan_img.png', "r")
+    tur_head = Image.open('turk_erdo.PNG', "r")
+    
+    vaccn_img = Image.open('vaccn.jpg', "r")
+    tur_vaccn = Image.open('turk_vacc.PNG', "r")
     
     
     
@@ -120,9 +120,9 @@ def main():
         if select1==countries[0]:
             slot1.subheader("Public perception on various issues across 4 major German cities:")
             slot2.subheader("")
-            ger_map = Image.open('ger_cities.PNG')
+            ger_map = Image.open('ger_cities.PNG',"r")
             slot3.image(ger_map,use_column_width=True)
-            ger_gov = Image.open('ger_all.PNG', "rb")
+            ger_gov = Image.open('ger_all.PNG', "r")
             slot4.subheader('Sentiment across 4 major cities of Germany:')
             slot5.subheader("")
             slot6.image(ger_gov,use_column_width=True)
@@ -131,9 +131,9 @@ def main():
         if select1==countries[1]:
             slot1.subheader("Public perception on various issues across 4 major Indian cities:")
             slot2.subheader("")
-            ind_map = Image.open('ind_map.PNG', "rb")
+            ind_map = Image.open('ind_map.PNG', "r")
             slot3.image(ind_map,use_column_width=True)
-            ind_gov = Image.open('india_all.PNG', "rb")
+            ind_gov = Image.open('india_all.PNG', "r")
             slot4.subheader('Sentiment across 4 major cities of India:')
             slot5.subheader("")
             slot6.image(ind_gov,use_column_width=True)
@@ -142,9 +142,9 @@ def main():
         if select1==countries[2]:
             slot1.subheader("Public perception on various issues across 4 major Turkish cities:")
             slot2.subheader("")
-            tur_map = Image.open('turky_map.PNG', "rb")
+            tur_map = Image.open('turky_map.PNG', "r")
             slot3.image(tur_map,use_column_width=True)
-            tur_gov = Image.open('turk_all.PNG')
+            tur_gov = Image.open('turk_all.PNG',"r")
             slot4.subheader('Sentiment across 4 major cities of Turkey:')
             slot5.subheader("")
             slot6.image(tur_gov,use_column_width=True)
